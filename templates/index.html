@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complejos turísticos</title>
+    <link rel="stylesheet" href="../static/styles.css"> <!-- Ajusta la ruta -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Complejo turístico</div>
+            <div class="nav-links">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Todas nuestras instalaciones disponibles por fecha </h1>
+        
+        <div class="search-form">
+            <input type="date" id="check-in" placeholder="Fecha de llegada">
+            <input type="date" id="check-out" placeholder="Fecha de salida">
+            <input type="text" id="guests" placeholder="1 habitación, 2 adultos, 0 niños">
+            <select id="tipo-alojamiento">
+                <option value="cabaña">Cabaña</option>
+                <option value="habitación">Habitación</option>
+            </select>
+            <button onclick="buscarHoteles()">Buscar</button>
+        </div>
+
+        <div id="resultados-hoteles"></div>
+
+        <div id="servicios-adicionales" style="display:none;">
+            <h2>Servicios Adicionales</h2>
+            <select id="servicios" multiple>
+                <option value="bar">Bar</option>
+                <option value="spa">Spa</option>
+                <option value="salon">Salón de Conferencias</option>
+                <option value="bicicletas">Alquiler de Bicicletas</option>
+            </select>
+            <button onclick="reservar()">Confirmar Reserva</button>
+        </div>
+    </main>
+
+    <script src="../static/script.js"></script> <!-- Ajusta la ruta -->
+</body>
+</html>
